@@ -8,9 +8,13 @@
 body {
   display: grid;
   justify-content: center;
-  gap: 60px;
+  gap: 3.75rem;
   background-color: #f7f7f7;
-  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+p {
+  font-weight: normal;
 }
 
 header {
@@ -20,59 +24,71 @@ header {
 }
 
 header img {
-  margin: 64px 0;
+  margin: 4rem 0;
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 1.25rem;
+  padding: 0;
+  list-style: none;
 }
 
 .menu a {
-  padding: 16px 32px;
+  padding: 1em 2em;
   border-radius: 4px;
-  background: #fff;
+  background-color: #fff;
   text-transform: uppercase;
+  border: 2px solid #fff;
   text-decoration: none;
+}
+
+.menu a:hover {
+  border-color: red;
 }
 
 img {
   max-width: 100%;
 }
 
-.grid {
+.conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 1000px;
+  max-width: 62.5rem;
 }
 
 .introducao {
   display: grid;
   align-content: center;
   justify-items: end;
-  gap: 20px;
+  gap: 1.25rem;
   
-  padding: 40px;
+  padding: 2.5rem;
   background: #fff;
   text-align: right;
   position: relative;
 }
 
-.detalhe {
-  width: 60px;
-  height: 4px;
+.introducao h1 {
+  font-size: 2rem;
+}
+
+.introducao::after {
+  content: "";
+  width: 3.75rem;
+  height: 0.25rem;
   background: #ee2211;
   position: absolute;
-  top: 30px;
-  right: -30px;
+  top: 1.875rem;
+  right: -1.875rem;
 }
 
 .ver-mais {
   background: #ee2211;
   color: #fff;
-  padding: 16px 32px;
+  padding: 1em 2em;
   border-radius: 4px;
 
   text-transform: uppercase;
@@ -80,26 +96,40 @@ img {
   font-weight: normal;
 }
 
+.ver-mais:hover {
+  background: #900;
+}
+
 .subtitulo {
   align-self: center;
-  padding: 40px;
+  padding: 2.5rem;
   color: #c6c6c6;
-  font-size: 64px;
+  font-size: 4rem;
   text-align: right; 
   text-transform: uppercase;
+  background-image: url("./img/onda.svg");
 }
 
 .vantagens {
   background: #fff;
-  padding: 40px;
+  padding: 2.5rem;
 }
 
 .vantagens-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 10px 20px;
-  padding: 20px;
+  gap: 0.625rem 1.25rem;
+  padding: 1.25rem;
+  border-left: 4px solid transparent;
 }
+
+.vantagens-item:hover { 
+  border-color: #ee2211;
+}
+.vantagens-item:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
 
 .vantagens-item p {
   grid-column: 2;
@@ -108,7 +138,7 @@ img {
 footer {
   background: #fff;
   width: 100%;
-  padding: 40px;
+  padding: 2.5rem;
   text-align: center;
   box-sizing: border-box;
 }
